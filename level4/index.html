@@ -1,0 +1,31 @@
+<!--
+    Problems:
+    Save your name in a variable inside script tag.
+    Display name from the variable on the page.
+    Calculate the cost of Myntra Bag and keep it in a variable.
+    Keep GST percentage as constant.
+    Use eval method from math to convert srting calculation into result. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracrice_set_4</title>
+</head>
+<body>
+    <p id="name"></p>
+    <script>
+        const name ="Md Haidar Raza";
+        document.querySelector('#name').innerText=name;
+
+        let Trouser = ((2499 - 41/100*2499) - 29);
+        let Bag = ((15599 - 10/100*15599)- 272);
+         //const GST = `${Math.round (18/100*(Trouser + Bag))}` 
+         const GST = 18;
+        let total = `Your total Bill is ${Math.round((Trouser + Bag )  +25 +20 ) * (100 + GST)/100}`
+        
+    </script>
+</body>
+</html>
