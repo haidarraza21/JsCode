@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra_Bag</title>
+    <style>
+       
+        .add_button{
+            background-color: chartreuse;
+            border-radius: 10px;
+            border: 1px solid chartreuse;
+        }
+        #wishlist_button{
+            text-transform: uppercase;
+            width: 220px;
+            height: 30px;
+            font-size: 15px;
+            border-radius: 10px;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="myntra_bag">
+        <button class="add_button" onclick="itemQuantity=itemQuantity+1;
+        document.querySelector('#items').innerText = `Your Bag has ${itemQuantity} items`;">Add to Bag</button>
+        <button id="wishlist_button" onclick="itemQuantity=itemQuantity-1;
+        document.querySelector('#items').innerText = `Your Bag has ${itemQuantity} items`;
+        ">Move to wishlist</button>
+        <button class="add_button" onclick="itemQuantity=itemQuantity+2;
+        document.querySelector('#items').innerText = `Your Bag has ${itemQuantity} items`;">Add 1+1 sale item</button>
+    </div>
+    <h1 id="items"></h1>
+
+
+    <script>
+         let itemQuantity =0;
+         document.querySelector('#items').innerText = `Your Bag has ${itemQuantity} items`;
+    </script>
+</body>
+</html>
